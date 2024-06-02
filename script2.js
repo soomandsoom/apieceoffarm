@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const grad = document.querySelector('.grad');
     const options = {
       root: null, // viewport
-      threshold: 0.3 // 50% visible
+      threshold: 0.2 // 50% visible
     };
 
     const originalGradient = 'linear-gradient(to bottom, white, transparent)'
@@ -65,31 +65,78 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     const section3 = document.querySelector('#section3');
-//     const grad = document.querySelector('.grad');
-//     const options = {
-//         root: null, // viewport
-//         threshold: 0.8 // 10% visible
-//     };
+document.addEventListener('DOMContentLoaded', () => {
+    const section2 = document.querySelector('#section2');
+    const grad = document.querySelector('.grad');
+    const options = {
+        root: null, // viewport
+        threshold: 0.6// 10% visible
+    };
 
-//     const originalGradient = 'linear-gradient(to bottom, white, transparent)';
-//     const originalBackgroundColor = document.body.style.backgroundColor;
+    const originalGradient = 'linear-gradient(to bottom, white, transparent)';
+    const originalBackgroundColor = document.body.style.backgroundColor;
 
-//     const section3Color = '#007578'; // new color for section3
-//     const section3Gradient = 'linear-gradient(to bottom, #007578, transparent)';
+    const section2Color = '#007578'; // new color for section3
+    const section2Gradient = 'linear-gradient(to bottom, #007578, transparent)';
 
-//     const observer = new IntersectionObserver((entries) => {
-//         entries.forEach(entry => {
-//             if (entry.target.id === 'section3' && entry.isIntersecting) {
-//                 document.body.style.backgroundColor = section3Color;
-//                 grad.style.background = section3Gradient;
-//             } else {
-//                 document.body.style.backgroundColor = originalBackgroundColor;
-//                 grad.style.background = originalGradient;
-//             }
-//         });
-//     }, options);
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.target.id === 'section2' && entry.isIntersecting) {
+                document.body.style.backgroundColor = section2Color;
+                grad.style.background = section2Gradient;
+            } else {
+                document.body.style.backgroundColor = originalBackgroundColor;
+                grad.style.background = originalGradient;
+            }
+        });
+    }, options);
 
-//     observer.observe(section3);
-// });
+    observer.observe(section2);
+
+    window.addEventListener('resize', () => {
+        const windowWidth = window.innerWidth;
+        if (windowWidth <= 1000) {
+            options.threshold = 0.8; // 윈도우 너비가 768px 이하일 때 threshold 값을 0.4로 변경
+        } else {
+            options.threshold = 0.6; // 윈도우 너비가 768px 초과일 때 threshold 값을 0.6으로 변경
+        }
+        // IntersectionObserver를 재시작하여 새로운 threshold 값을 적용합니다.
+        observer.disconnect();
+        observer.observe(section2);
+    });
+});
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const section4 = document.querySelector('#section4');
+    const grad = document.querySelector('.grad');
+    const options = {
+        root: null, // viewport
+        threshold: 0.6// 10% visible
+    };
+
+    const originalGradient = 'linear-gradient(to bottom, white, transparent)';
+    const originalBackgroundColor = document.body.style.backgroundColor;
+
+    const section4Color = '#007578'; // new color for section3
+    const section4Gradient = 'linear-gradient(to bottom, #007578, transparent)';
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.target.id === 'section4' && entry.isIntersecting) {
+                document.body.style.backgroundColor = section4Color;
+                grad.style.background = section4Gradient;
+            } else {
+                document.body.style.backgroundColor = originalBackgroundColor;
+                grad.style.background = originalGradient;
+            }
+        });
+    }, options);
+
+    observer.observe(section4);
+
+});

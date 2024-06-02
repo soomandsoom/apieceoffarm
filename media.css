@@ -9,6 +9,7 @@
 
     header {
         font-size: 20px;
+        font-weight: 900;
     }
 
     .logo {
@@ -78,15 +79,6 @@
     }
 
 
-
-    .zks{
-        display: grid;
-        grid-template-rows: auto;
-        grid-template-columns: 1fr 2fr;
-        gap:1.5rem;
-        width: 80%;
-        align-items: center;
-    }   
     
     .circles{
         display: flex;
@@ -121,11 +113,87 @@
     .sec2{
         font-size: 15px;
         line-height: 1.5em;
-        padding: 8rem 0 4rem 0 ;
+        padding: 0 ;
+        }
+    .element{
+        width: 7vh;
+        height:7vh;
+
+    }    
+    .circles{
+        gap: 1rem;
+    }
+    .detail-box {
+        border: 1px solid #007578;
+        padding: 1rem;
+        margin: 2rem 0 0 0;
+        font-size: 15px;
+        line-height: 1.6em;
+    }
+    
+    .element-text{
+        font-size: 10px;
+    }
+
+    .section2{
+        margin-bottom:40rem;
+    }
+
+    .sec3text{
+        font-size: 15px;
+        line-height: 1.6em;
+        grid-column: 2/4;
+        grid-row: 1/2;
+        align-self: start;
+    }
+    .sec3text:last-child{
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+
+    .sec3title{
+        font-size: 28px;
+}
+    .sec3text img{
+        width: 3vh;
+    }
+
+    .section3{
+        margin-bottom:30rem;
+    }
+    .section3:last-child{
+        padding-bottom:  50rem;
+
+    }
+    .map{
+        grid-column: 2/4;
+        grid-row: 2/3;
+        width:100%;
+        height: 100%;
+    }
+    .sec3-title{
+        font-size: 28px;
+        grid-row:1/2;
+        grid-column: 2/4;
+        align-self: end;
+    }
+    .sec3group:nth-child(1){
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-template-rows: 2fr 1fr;
+        gap: 1.5rem;
     }
 
 
+    .section4{
+        margin-bottom:20rem;
+    }
+
+    footer{
+        font-size: 10px;
+    }
 }
+
+
 @media (min-width: 601px) and (max-width: 800px) {
 
     header {
@@ -202,22 +270,87 @@
     .sec2{
         font-size: 18px;
         line-height: 1.6em;
-        padding: 8rem 0 10rem 0 ;
-
+        padding: 2rem 0 2rem 0 ;
     }
 
-    .zks{
-        gap:1rem;
-        width: 13vh;
+    .element{
+        width:10vh;
+        height:10vh;
+    }    
+    .circles{
+        gap: 2rem;
+    }
+    .detail-box {
+        padding: 2rem;
+        font-size: 18px;
+        line-height: 1.6em;
     }
     
-    .circles{
-        gap: 3rem;
-    }
-
     .element-text{
         font-size: 18px;
     }
+
+    .section2{
+        margin-bottom:50rem;
+    }
+
+    .section3{
+        margin-bottom:30rem;
+    }
+    
+    .sec3text{
+        font-size: 18px;
+        line-height: 1.6em;
+        grid-column: 2/4;
+        grid-row: 1/2;
+        align-self: start;
+    }
+    .sec3text:last-child{
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+
+    .sec3title{
+        font-size: 28px;
+}
+    .sec3text img{
+        width: 3vh;
+    }
+
+    .section3{
+        margin-bottom:30rem;
+    }
+    .section3:last-child{
+        padding-bottom:  50rem;
+
+    }
+    .map{
+        grid-column: 2/4;
+        grid-row: 2/3;
+        width:100%;
+        height: 100%;
+    }
+    .sec3-title{
+        font-size: 28px;
+        grid-row:1/2;
+        grid-column: 2/4;
+        align-self: end;
+    }
+    .sec3group:nth-child(1){
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-template-rows: 2fr 1fr;
+        gap: 1.5rem;
+    }
+
+
+    .section4{
+        margin-bottom:20rem;
+    }
+
+    footer{
+        font-size: 10px;
+    }
+
 }
 
 
@@ -296,17 +429,77 @@
         line-height: 1.6em;
     }
 
-    .zks{
-        width: 15vh;
+    .element{
+        width:15vh;
+        height:15vh;
+    }    
+    .circles{
+        gap: 2rem;
+    }
+    .detail-box {
+        padding: 2rem;
+        font-size: 18px;
+        line-height: 1.6em;
     }
     
-    .circles{
-        gap: 5rem;
-    }
-
     .element-text{
         font-size: 18px;
+    }
 
+    .section2{
+        margin-bottom:50rem;
+    }
+    .sec3text{
+        font-size: 18px;
+        line-height: 1.6em;
+        grid-column: 2/4;
+        grid-row: 1/2;
+        align-self: start;
+    }
+    .sec3text:last-child{
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+
+    .sec3title{
+        font-size: 28px;
+}
+    .sec3text img{
+        width: 3vh;
+    }
+
+    .section3{
+        margin-bottom:30rem;
+    }
+    .section3:last-child{
+        padding-bottom:  50rem;
+
+    }
+    .map{
+        grid-column: 2/4;
+        grid-row: 2/3;
+        width:100%;
+        height: 100%;
+    }
+    .sec3-title{
+        font-size: 28px;
+        grid-row:1/2;
+        grid-column: 2/4;
+        align-self: end;
+    }
+    .sec3group:nth-child(1){
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-template-rows: 2fr 1fr;
+        gap: 1.5rem;
+    }
+
+
+    .section4{
+        margin-bottom:20rem;
+    }
+
+    footer{
+        font-size: 10px;
     }
 }
 
@@ -370,14 +563,40 @@
         grid-column: 1/7;
     }
 
-    .zks{
-        width: 18vh;
-    }
     
     .circles{
-        gap: 7rem;
+        gap: 3rem;
+    }
+
+    .sec3text{
+        grid-column: 2/4;
+        grid-row: 1/2;
+        align-self: start;
+    }
+
+    .sec3text img{
+        width: 3vh;
+    }
+
+    .section3{
+        margin-bottom:40rem;
     }
     
+    .map{
+        grid-column: 2/4;
+        grid-row: 2/3;
+        width:100%;
+        height: 100%;
+    }
+
+    .sec3group:nth-child(2){
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .section4{
+        margin-bottom:20rem;
+    }
 }
 
 @media (min-width: 1301px) and (max-width: 1449px) {
@@ -399,7 +618,5 @@
         font-size: 24px;
         line-height: 1.6em;
     }
-
-
 
 }
